@@ -1,8 +1,8 @@
 # ocd-release-build
 
-This is a webhook chart to perform a release build  openshift or OKD. The idea is that it creates a tagged release inmage that exactly matches the code that has the git release tag. This is an optional component that can run to one side of your preferred CI pipeline. Teams that already have a pipeline that creates release images (e.g., Jenkins or similar container release jobs) can choose not to use this optional component.
+This is a webhook chart to perform a release build on Openshift (aka OKD). The idea is that it creates a tagged release image that exactly matches the code that has the git release tag. 
 
-As this component is used for release builds it can run along side any CI build. For example, we use circleci for our CI build. We then use the OCD slackbot to trigger a git release from a branch, tag or commit. A webhook then fires this component that makes our release build tagging the resulting image with the git release tag.
+As this component is used for release builds it can run along side any CI build. For example, we use circleci for our CI build. We then use the OCD slackbot to trigger a git release from a branch, tag or commit. A webhook then fires this component running in openshift that makes our release build tagging the resulting image with the git release tag.
 
 # Architecture
 
